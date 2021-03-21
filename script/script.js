@@ -46,7 +46,7 @@ const limparDisplay = () => { // Aqui vai zerar toda a operacao.
 
 const limpar = document.querySelector("#limpar").addEventListener("click", limparDisplay) //Select the limpar button.
 
-const insertNumber = (event) => updateDisplay(event.target.textContent); // it call updateDisplay's arrow function (Recebendo o texto contido no alvo do evento).
+const insertNumber = (event) => updateDisplay(event.target.textContent); // it is call updateDisplay's arrow function (Recebendo o texto contido no alvo do evento).
 
 numbers.forEach(numero => numero.addEventListener("click", insertNumber)); //Percorre todos os Ids com nome button[] add o evento Click.
 
