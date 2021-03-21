@@ -4,16 +4,16 @@ const operators = document.querySelectorAll("[id*=operators]"); //Select all Ope
 
 let newNumber = true;
 let operator;
-let beforeNumber;
+let beforeNumber; // Numbero anterior.
 
-const operacaoPendente = () => operator !== undefined;
+const operacaoPendente = () => operator !== undefined; // Aqui reseta o Operator.
 
 const calcular = () => {
     if (operacaoPendente()) { // Valida se ja tem um Operator pendente. Se tiver ele nao calcula.
         newNumber = true;
         const numeroAtual = parseFloat(display.textContent); // Aqui fica o text atual salvo no insertNumber.
 
-        const resultado = eval(`${beforeNumber} ${operator} ${numeroAtual}`);
+        const resultado = eval(`${beforeNumber} ${operator} ${numeroAtual}`); // shortCode.
         updateDisplay(resultado);
 
 
@@ -30,7 +30,7 @@ const calcular = () => {
     }
 }
 
-const activeIgual = () => {
+const activeIgual = () => { // Logica de quando for chamado o Igual.
     calcular();
     operator = undefined;
 }
@@ -53,17 +53,17 @@ numbers.forEach(numero => numero.addEventListener("click", insertNumber)); //Per
 const updateDisplay = (text) => {
     if (newNumber) {
         display.textContent = text // add valores no display
-        newNumber = false;
+        newNumber = false; // Logica de quando o numero nao precisa ser salvo.
     } else {
         display.textContent += text // concatena valores no display.
     }
 };
-let selectOperator = () => {
+let selectOperator = () => { // Aqui fica a modulacao dos operators.
     if (!newNumber) {
         calcular();
         newNumber = true;
-        operator = event.target.textContent;
-        beforeNumber = parseFloat(display.textContent);
+        operator = event.target.textContent; // Salvando o operador
+        beforeNumber = parseFloat(display.textContent); // Salvando o numero 
     }
 }
 
