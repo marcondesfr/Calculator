@@ -44,7 +44,7 @@ const limparDisplay = () => { // Aqui vai zerar toda a operacao.
     newNumber = true;
 }
 
-const limpar = document.querySelector("#limparDisplay").addEventListener("click", limparDisplay) //Select the limpar button.
+const limpar = document.querySelector("#limpar").addEventListener("click", limparDisplay) //Select the limpar button.
 
 const insertNumber = (event) => updateDisplay(event.target.textContent); // it call updateDisplay's arrow function (Recebendo o texto contido no alvo do evento).
 
