@@ -31,13 +31,14 @@ body {
 }
 
 .ress {
+    font: normal 40pt arial;
     margin: auto;
     width: 280px;
     height: 70px;
     background: #f1f1f1;
 }
 
-#number0 {
+#button0 {
     width: 124px;
 }
 
